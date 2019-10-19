@@ -1,9 +1,11 @@
 # ddpg-pytorch
-PyTorch implementation of DDPG for continous control tasks.
+PyTorch implementation of DDPG for continuous control tasks.
 
-This is a PyTorch implementation of Deep Deterministic Policy Gradients proposed in [CONTINUOUS CONTROL WITH DEEP REINFORCEMENT LEARNING](https://arxiv.org/abs/1509.02971).
+This is a PyTorch implementation of Deep Deterministic Policy Gradients developed in [CONTINUOUS CONTROL WITH DEEP REINFORCEMENT LEARNING](https://arxiv.org/abs/1509.02971).
 
-This implementation is inspired by the OpenAI baselines for [DDPG](https://github.com/openai/baselines/tree/master/baselines/ddpg) and the newer [TD3](https://github.com/sfujim/TD3) implementation. But instead of parameter space noise this iplementation uses the original Ornstein-Uhlenbeck noise process of the original DDPG implementation.
+![Roboschool Swingup Task](img/roboschool_swingup.gif)
+
+This implementation is inspired by the OpenAI baseline of [DDPG](https://github.com/openai/baselines/tree/master/baselines/ddpg), the newer [TD3](https://github.com/sfujim/TD3) implementation and also various other resources about DDPG. But instead of parameter space noise this implementation uses the original Ornstein-Uhlenbeck noise process of the original DDPG implementation.
 
 ## Tested environments (via [OpenAI Gym](https://gym.openai.com))
 
@@ -14,6 +16,7 @@ Since 'Roboschool' is deprecated, I highly recommend using [PyBullet](http://pyb
 ## Requirements
 
 * Python 3
+* TensorBoard
 * [PyTorch](http://pytorch.org/)
 * [OpenAI baselines](https://github.com/openai/baselines)
 * [OpenAI gym](https://github.com/openai/baselines)
@@ -21,14 +24,19 @@ Since 'Roboschool' is deprecated, I highly recommend using [PyBullet](http://pyb
 
 ## Training
 
+```bash
+python train.py --env "RoboschoolInvertedPendulumSwingup-v1"
+```
+
+## Testing
 
 ```bash
-python train.py --env-name "RoboschoolInvertedPendulumSwingup-v1"
+python test.py --env "RoboschoolInvertedPendulumSwingup-v1"
 ```
 
 ## Pretrained models
 
-Pretrained models can be found in ![the folder 'saved_models'](saved_models/) for the *'RoboschoolInvertedPendulumSwingup-v1'* and the *'RoboschoolInvertedPendulum-v1'* environments.
+Pretrained models can be found in [the folder 'saved_models'](saved_models/) for the *'RoboschoolInvertedPendulumSwingup-v1'* and the *'RoboschoolInvertedPendulum-v1'* environments.
 
 ## Contributions
 
@@ -36,4 +44,4 @@ Contributions are welcome. If you find any bugs, know how to make the code bette
 
 ## Disclaimer
 
-It's extremely difficult to reproduce results for Reinforcement Learning methods. See ["Deep Reinforcement Learning that Matters"](https://arxiv.org/abs/1709.06560) for more information. I tried to reproduce the original paper and the OpenAI implementation as close as possible, but I wanted to use Roboschool also. This made the task more difficult, since there are no benchmarks for DDPG with Roboschool.
+This repo is an attempt to reproduce results of Reinforcement Learning methods to gain a deeper understanding of the developed concepts. But even with quite numerus other reproductions, an own reproduction is a quite difficult task even today. In ["Deep Reinforcement Learning that Matters"](https://arxiv.org/abs/1709.06560) you can read more about reproducibility of Reinforcement Learning methods. I tried to reproduce the original paper and the OpenAI implementation as close as possible, but I wanted to use Roboschool also. This made the task more difficult, since there are no benchmarks for DDPG with Roboschool and thus the choice of hyperparameters was much more difficult.
