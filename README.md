@@ -3,7 +3,9 @@ PyTorch implementation of DDPG for continuous control tasks.
 
 This is a PyTorch implementation of Deep Deterministic Policy Gradients developed in [CONTINUOUS CONTROL WITH DEEP REINFORCEMENT LEARNING](https://arxiv.org/abs/1509.02971).
 
-![Roboschool Swingup Task](img/roboschool_swingup.gif)
+<p align="center"> 
+<img src="img/roboschool_swingup.gif">
+</p>
 
 This implementation is inspired by the OpenAI baseline of [DDPG](https://github.com/openai/baselines/tree/master/baselines/ddpg), the newer [TD3](https://github.com/sfujim/TD3) implementation and also various other resources about DDPG. But instead of parameter space noise this implementation uses the original Ornstein-Uhlenbeck noise process of the original DDPG implementation.
 
@@ -17,6 +19,7 @@ Since 'Roboschool' is deprecated, I highly recommend using [PyBullet](http://pyb
 
 * Python 3
 * TensorBoard
+* TQDM
 * [PyTorch](http://pytorch.org/)
 * [OpenAI baselines](https://github.com/openai/baselines)
 * [OpenAI gym](https://github.com/openai/baselines)
