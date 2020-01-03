@@ -42,7 +42,7 @@ Pretrained models can be found in [the folder 'saved_models'](saved_models/) for
 
 ## Contributions
 
-Contributions are welcome. If you find any bugs, know how to make the code better or want to implement used other used methods regarding DDPG, please open an issue or a pull request.
+Contributions are welcome. If you find any bugs, know how to make the code better or want to implement other used methods regarding DDPG, please open an issue or a pull request.
 
 ## Disclaimer
 
